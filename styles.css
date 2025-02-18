@@ -1,11 +1,11 @@
 /* General Styling */
 body {
-    background-image: url("impact.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: #333;
+    background-image: url("impact.jpg"); /* Local path to your background image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fix background while scrolling */
+    background-repeat: no-repeat; /* Prevent repeating */
+    color: #333; /* Darker text color */
     font-family: 'Arial', sans-serif;
     text-align: center;
     margin: 0;
@@ -14,42 +14,106 @@ body {
 
 /* Overlay for background transparency */
 .background-overlay {
-    position: absolute;
+    position: fixed; /* Covers the viewport */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+    height: 100vh; /* 100% of viewport height */
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust transparency */
+    z-index: -1; /* Place behind the content */
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.75); /* Slightly dark header */
+    padding: 30px;
     border-bottom: 2px solid #ffcc00;
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 40px;
+    margin-bottom: 15px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #f4f4f4;
+    color: #f4f4f4; /* Lighter color for the main header */
 }
 
 h2 {
-    font-size: 1.75rem;
-    margin: 1.5rem 0;
+    font-size: 28px;
+    margin: 20px 0;
     font-weight: 600;
-    color: #f4f4f4;
+    color: #f4f4f4; /* Lighter color for sub-headings */
 }
-
-.logo {
-    width: 80%;
-    max-width: 300px;
+/* Ensure images scale properly */
+.logo, .event-logo {
+    width: 80%;  /* Adjust width for responsiveness */
+    max-width: 500px; /* Prevent it from being too large */
     height: auto;
     display: block;
-    margin: 1.5rem auto;
+    margin: 20px auto;
+}
+
+/* Responsive header */
+header {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .logo, .event-logo {
+        width: 90%; /* Make images smaller on smaller screens */
+        max-width: 300px;
+    }
+
+    #countdown {
+        font-size: 24px;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .logo, .event-logo {
+        width: 95%;
+        max-width: 250px;
+    }
+
+    #countdown {
+        font-size: 20px;
+    }
 }
 
 h2 .highlight {
@@ -57,33 +121,30 @@ h2 .highlight {
 }
 
 nav {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    margin-top: 20px;
 }
 
 nav a {
     color: #f4f4f4;
     text-decoration: none;
-    font-size: 1.25rem;
+    margin: 0 25px;
+    font-size: 20px;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ffcc00;
+    color: #ffcc00; /* Yellow hover effect */
 }
 
 /* Button Styling */
 .btn {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 15px 30px;
     background-color: #ffcc00;
     color: black;
     text-decoration: none;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -97,18 +158,18 @@ nav a:hover {
 
 /* Countdown Timer */
 #countdown {
-    font-size: 2rem;
-    margin-top: 1.5rem;
+    font-size: 32px;
+    margin-top: 25px;
     font-weight: 700;
     color: #ffcc00;
 }
 
 /* Block Text */
 p, h2, h3 {
-    margin: 1.5rem auto;
+    margin: 25px auto;
     line-height: 1.6;
-    max-width: 90%;
-    color: #333;
+    max-width: 800px;
+    color: #333; /* Darker text for better contrast */
 }
 
 .highlight {
@@ -118,11 +179,11 @@ p, h2, h3 {
 /* Footer */
 footer {
     text-align: center;
-    padding: 1.5rem;
+    padding: 20px;
     background-color: #111;
     color: #f4f4f4;
-    margin-top: 3rem;
-    font-size: 1rem;
+    margin-top: 50px;
+    font-size: 18px;
 }
 
 footer a {
@@ -130,40 +191,3 @@ footer a {
     text-decoration: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        padding: 1.5rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .btn {
-        padding: 0.75rem 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.75rem;
-    }
-
-    h2 {
-        font-size: 1.25rem;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        font-size: 1rem;
-    }
-}
