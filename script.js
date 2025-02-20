@@ -39,3 +39,4 @@ document.getElementById("registerBtn").addEventListener("click", function () {
 
 // Start the countdown when the page loads
 window.onload = startCountdown;
+
