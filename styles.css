@@ -23,6 +23,7 @@ body {
     z-index: -1; /* Place behind the content */
 }
 
+/* Header Styling */
 header {
     background-color: rgba(0, 0, 0, 0.75); /* Slightly dark header */
     padding: 30px;
@@ -43,7 +44,8 @@ h2 {
     font-weight: 600;
     color: #f4f4f4; /* Lighter color for sub-headings */
 }
-/* Ensure images scale properly */
+
+/* Logo Styling */
 .logo, .event-logo {
     width: 80%;  /* Adjust width for responsiveness */
     max-width: 500px; /* Prevent it from being too large */
@@ -52,75 +54,12 @@ h2 {
     margin: 20px auto;
 }
 
-/* Responsive header */
-header {
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 20px;
-    text-align: center;
-}
-
-/* Responsive navigation */
+/* Navigation Bar */
 nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-}
-
-nav a {
-    font-size: 18px;
-    padding: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    .logo, .event-logo {
-        width: 90%; /* Make images smaller on smaller screens */
-        max-width: 300px;
-    }
-
-    #countdown {
-        font-size: 24px;
-    }
-}
-
-/* Further adjustments for very small screens */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    .logo, .event-logo {
-        width: 95%;
-        max-width: 250px;
-    }
-
-    #countdown {
-        font-size: 20px;
-    }
-}
-
-h2 .highlight {
-    color: #ffcc00;
-}
-
-nav {
     margin-top: 20px;
 }
 
@@ -135,6 +74,27 @@ nav a {
 
 nav a:hover {
     color: #ffcc00; /* Yellow hover effect */
+}
+
+/* Event Posters Styling */
+.event-poster {
+    width: 100%;
+    max-width: 450px; /* Adjust max width for better display */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for a 3D effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-poster:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Event Text Alignment */
+#events h4, #events p {
+    text-align: center;
 }
 
 /* Button Styling */
@@ -172,6 +132,10 @@ p, h2, h3 {
     color: #333; /* Darker text for better contrast */
 }
 
+h2 .highlight {
+    color: #ffcc00;
+}
+
 .highlight {
     font-weight: 600;
 }
@@ -189,5 +153,189 @@ footer {
 footer a {
     color: #ffcc00;
     text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .logo, .event-logo {
+        width: 90%; /* Make images smaller on smaller screens */
+        max-width: 300px;
+    }
+
+    .event-poster {
+        max-width: 350px; /* Reduce poster size for smaller screens */
+    }
+
+    #countdown {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .logo, .event-logo {
+        width: 95%;
+        max-width: 250px;
+    }
+
+    .event-poster {
+        max-width: 300px; /* Further reduce poster size */
+    }
+
+    #countdown {
+        font-size: 20px;
+    }
+
+}
+
+/* Events Section - Dark Theme */
+#events {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
+    padding: 40px;
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Slight shadow effect */
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Adjust text color for better visibility */
+#events h2, #events h3, #events h4, #events p {
+    color: #f4f4f4; /* Light text for contrast */
+}
+
+/* Style for event titles */
+#events h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffcc00; /* Yellow underline */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#events h4 {
+    font-size: 22px;
+    margin-top: 20px;
+    color: #ffcc00; /* Yellow text */
+}
+
+/* Adjust text alignment */
+#events p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Enhance event posters */
+.event-poster {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 2px solid #ffcc00; /* Yellow border for visibility */
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.4); /* Soft glow effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-poster:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #events {
+        padding: 20px;
+    }
+
+    #events h3 {
+        font-size: 22px;
+    }
+
+    #events h4 {
+        font-size: 20px;
+    }
+
+    #events p {
+        font-size: 16px;
+    }
+}
+/* Contact Us & Register Section */
+.contact-container, .register-container {
+    background-color: rgba(0, 0, 0, 0.85); /* Dark background */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3); /* Glowing effect */
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-container:hover, .register-container:hover {
+    transform: scale(1.02);
+}
+
+/* Heading Styles */
+.contact-container h2, .register-container h2 {
+    color: #ffcc00; /* Bright Yellow */
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Paragraph Styling */
+.contact-container p, .register-container p {
+    font-size: 20px;
+    color: #f4f4f4;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Decorative Lines */
+.contact-container::before, .register-container::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #ffcc00;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container, .register-container {
+        padding: 35px;
+    }
+
+    .contact-container h2, .register-container h2 {
+        font-size: 26px;
+    }
+
+    .contact-container p, .register-container p {
+        font-size: 18px;
+    }
 }
 
